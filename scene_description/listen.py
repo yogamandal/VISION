@@ -34,9 +34,13 @@ import sounddevice as sd
 import sys
 import json
 from vosk import Model, KaldiRecognizer
+# import os
+# base_dir = os.path.dirname(os.path.abspath(__file__))
+# MODEL_PATH = os.path.join(base_dir, "..", "vosk-model-small-en-in-0.4")
 import os
-base_dir = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(base_dir, "..", "vosk-model-small-en-in-0.4")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "vosk-model-small-en-in-0.4")
+MODEL_PATH = os.path.abspath(MODEL_PATH)
+
 
 # Load model
 # MODEL_PATH = "vosk_models/vosk-model-small-en-us-0.15"

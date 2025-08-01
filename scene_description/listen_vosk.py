@@ -6,7 +6,11 @@ import json
 
 # Path to the Vosk model folder (unzip first!)
 # MODEL_PATH = "/Users/amankashyap/smart-assistant-scene/vosk-model-small-en-in-0.4"
-MODEL_PATH = "/Users/amankashyap/smart-assistant-scene/vosk-model-small-en-in-0.4"
+# MODEL_PATH = "/Users/amankashyap/smart-assistant-scene/vosk-model-small-en-in-0.4"
+import os
+
+MODEL_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "vosk-model-small-en-in-0.4"))
+
 
 # Load model once
 model = vosk.Model(MODEL_PATH)
